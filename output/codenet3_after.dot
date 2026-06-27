@@ -1,0 +1,9 @@
+digraph G {
+  "Start" [style=filled fillcolor=lightblue];
+  "return x * x (1)" [style=filled fillcolor=lightblue];
+  "decl y =  (2)" [style=filled fillcolor=lightblue];
+  "return y (3)" [style=filled fillcolor=lightblue];
+  "Start" -> "return x * x (1)";
+  "Start" -> "decl y =  (2)";
+  "decl y =  (2)" -> "return y (3)";
+}

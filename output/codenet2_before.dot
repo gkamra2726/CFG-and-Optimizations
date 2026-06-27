@@ -1,0 +1,20 @@
+digraph G {
+  "Start" [style=filled fillcolor=lightblue];
+  "decl x = 10 (1)" [style=filled fillcolor=lightblue];
+  "if x > 5 (2)" [style=filled fillcolor=lightblue];
+  "true (3)" [style=filled fillcolor=lightblue];
+  "false (4)" [style=filled fillcolor=lightblue];
+  "assign x = x + 1 (5)" [style=filled fillcolor=lightblue];
+  "assign x = x - 1 (6)" [style=filled fillcolor=lightblue];
+  "merge (7)" [style=filled fillcolor=lightblue];
+  "return x (8)" [style=filled fillcolor=lightblue];
+  "Start" -> "decl x = 10 (1)";
+  "decl x = 10 (1)" -> "if x > 5 (2)";
+  "if x > 5 (2)" -> "true (3)";
+  "if x > 5 (2)" -> "false (4)";
+  "true (3)" -> "assign x = x + 1 (5)";
+  "false (4)" -> "assign x = x - 1 (6)";
+  "assign x = x + 1 (5)" -> "merge (7)";
+  "assign x = x - 1 (6)" -> "merge (7)";
+  "merge (7)" -> "return x (8)";
+}

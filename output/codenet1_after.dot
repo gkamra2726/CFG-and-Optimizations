@@ -1,0 +1,9 @@
+digraph G {
+  "Start" [style=filled fillcolor=lightblue];
+  "decl b = 10 (1)" [style=filled fillcolor=lightblue];
+  "decl c = 1 + b (2)" [style=filled fillcolor=lightblue];
+  "return c (3)" [style=filled fillcolor=lightblue];
+  "Start" -> "decl b = 10 (1)";
+  "decl b = 10 (1)" -> "decl c = 1 + b (2)";
+  "decl c = 1 + b (2)" -> "return c (3)";
+}

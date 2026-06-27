@@ -1,0 +1,32 @@
+digraph G {
+  "Start" [style=filled fillcolor=lightblue];
+  "decl a = 5 (1)" [style=filled fillcolor=lightblue];
+  "decl b = 10 (2)" [style=filled fillcolor=lightblue];
+  "decl c = 20 (3)" [style=filled fillcolor=lightblue];
+  "decl d = 30 (4)" [style=filled fillcolor=lightblue];
+  "decl x = a + 1 (5)" [style=filled fillcolor=lightblue];
+  "decl y = 100 (6)" [style=filled fillcolor=lightblue];
+  "decl z = 200 (7)" [style=filled fillcolor=lightblue];
+  "if x > 0 (8)" [style=filled fillcolor=lightblue];
+  "true (9)" [style=filled fillcolor=lightblue];
+  "false (10)" [style=filled fillcolor=lightblue];
+  "decl p = 50 (11)" [style=filled fillcolor=lightblue];
+  "assign x = x + 2 (12)" [style=filled fillcolor=lightblue];
+  "merge (13)" [style=filled fillcolor=lightblue];
+  "return x (14)" [style=filled fillcolor=lightblue];
+  "Start" -> "decl a = 5 (1)";
+  "decl a = 5 (1)" -> "decl b = 10 (2)";
+  "decl b = 10 (2)" -> "decl c = 20 (3)";
+  "decl c = 20 (3)" -> "decl d = 30 (4)";
+  "decl d = 30 (4)" -> "decl x = a + 1 (5)";
+  "decl x = a + 1 (5)" -> "decl y = 100 (6)";
+  "decl y = 100 (6)" -> "decl z = 200 (7)";
+  "decl z = 200 (7)" -> "if x > 0 (8)";
+  "if x > 0 (8)" -> "true (9)";
+  "if x > 0 (8)" -> "false (10)";
+  "true (9)" -> "decl p = 50 (11)";
+  "false (10)" -> "merge (13)";
+  "decl p = 50 (11)" -> "assign x = x + 2 (12)";
+  "assign x = x + 2 (12)" -> "merge (13)";
+  "merge (13)" -> "return x (14)";
+}
