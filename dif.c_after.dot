@@ -1,0 +1,14 @@
+strict digraph {
+Start;
+B26_if [label=if];
+B27_true [label=true];
+B28_false [label=false];
+B30_assign_x [label="assign_x"];
+B31_merge [label=merge];
+B32_return [label=return];
+B26_if -> B27_true;
+B26_if -> B28_false;
+B28_false -> B31_merge;
+B30_assign_x -> B31_merge;
+B31_merge -> B32_return;
+}

@@ -1,0 +1,9 @@
+strict digraph {
+Start;
+B1_decl_i [label="decl_i"];
+B2_decl_sum [label="decl_sum"];
+B3_return [label=return];
+Start -> B1_decl_i;
+B1_decl_i -> B2_decl_sum;
+B2_decl_sum -> B3_return;
+}

@@ -1,0 +1,11 @@
+strict digraph {
+Start;
+B12_decl_a [label="decl_a"];
+B13_decl_b [label="decl_b"];
+B14_decl_c [label="decl_c"];
+B15_return [label=return];
+Start -> B12_decl_a;
+B12_decl_a -> B13_decl_b;
+B13_decl_b -> B14_decl_c;
+B14_decl_c -> B15_return;
+}

@@ -1,0 +1,20 @@
+strict digraph {
+Start;
+B4_decl_x [label="decl_x"];
+B5_if [label=if];
+B6_true [label=true];
+B7_false [label=false];
+B8_assign_x [label="assign_x"];
+B9_assign_x [label="assign_x"];
+B10_merge [label=merge];
+B11_return [label=return];
+Start -> B4_decl_x;
+B4_decl_x -> B5_if;
+B5_if -> B6_true;
+B5_if -> B7_false;
+B6_true -> B8_assign_x;
+B7_false -> B9_assign_x;
+B8_assign_x -> B10_merge;
+B9_assign_x -> B10_merge;
+B10_merge -> B11_return;
+}

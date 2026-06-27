@@ -1,0 +1,32 @@
+strict digraph {
+Start;
+B19_decl_a [label="decl_a"];
+B20_decl_b [label="decl_b"];
+B21_decl_c [label="decl_c"];
+B22_decl_d [label="decl_d"];
+B23_decl_x [label="decl_x"];
+B24_decl_y [label="decl_y"];
+B25_decl_z [label="decl_z"];
+B26_if [label=if];
+B27_true [label=true];
+B28_false [label=false];
+B29_decl_p [label="decl_p"];
+B30_assign_x [label="assign_x"];
+B31_merge [label=merge];
+B32_return [label=return];
+Start -> B19_decl_a;
+B19_decl_a -> B20_decl_b;
+B20_decl_b -> B21_decl_c;
+B21_decl_c -> B22_decl_d;
+B22_decl_d -> B23_decl_x;
+B23_decl_x -> B24_decl_y;
+B24_decl_y -> B25_decl_z;
+B25_decl_z -> B26_if;
+B26_if -> B27_true;
+B26_if -> B28_false;
+B27_true -> B29_decl_p;
+B28_false -> B31_merge;
+B29_decl_p -> B30_assign_x;
+B30_assign_x -> B31_merge;
+B31_merge -> B32_return;
+}
